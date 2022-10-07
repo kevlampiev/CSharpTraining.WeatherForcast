@@ -1,3 +1,5 @@
+using WeatherForcast.Sources;
+
 namespace WeatherForcast
 {
     public class Program
@@ -9,6 +11,7 @@ namespace WeatherForcast
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddSingleton<WeatherDB>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
